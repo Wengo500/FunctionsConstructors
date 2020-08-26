@@ -119,7 +119,7 @@ user.upgrade();
 user1.upgrade();
 user2.upgrade();
 
-user.fine();
+user.fine('noise');
 
 console.log(user);
 console.log(user1);
