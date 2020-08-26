@@ -70,13 +70,13 @@ function User(name, language, grade = grades.Junior, level = levels.one) {
         if (this.finTasks > 0 && this.finTasks < 2) {
             console.log(this.name + ' does not have enough finish tasks for level "Yellow"')
         }
-        if (this.finTasks === 2) {
+        if (this.finTasks >= 2) {
             this.level = levels.two;
         };
-        if (this.finTasks > 2 && this.finTasks < 4) {
+        if (this.finTasks > 3 && this.finTasks < 4) {
             console.log(this.name + ' does not have enough finish tasks for level "Green"')
         }
-        if (this.finTasks === 4) {
+        if (this.finTasks >= 4) {
             this.level = levels.three;
         };
         if (this.finTasks > 4 && this.finTasks < 6) {
@@ -119,7 +119,7 @@ user.upgrade();
 user1.upgrade();
 user2.upgrade();
 
-user.fine('noise');
+user.fine();
 
 console.log(user);
 console.log(user1);
